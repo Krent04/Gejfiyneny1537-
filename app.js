@@ -45,7 +45,7 @@ function createStartSlide(number = 1) {
   slide.className = "slide start";
 
   const img = document.createElement("img");
-  img.src = "logo.png";
+  img.src = "https://drive.google.com/uc?export=view&id=1SZGiqQ6yYbr8kJk0aFmOB_TzEORDlCSn";
   img.alt = "Theaterscholen Songfestival Logo";
   img.style.maxWidth = "50%";
   img.style.objectFit = "contain";
@@ -65,7 +65,21 @@ function createJuryIntroSlide(jurySchool) {
 
   // Video-element toevoegen
   const video = document.createElement("video");
-  video.src = `vlaggenanimaties/${jurySchool}.mp4`;
+  const vlaggenanimatiesMp4 = {
+    "Antwerpen": "https://drive.google.com/uc?export=view&id=1snegMVIluDjShELEcVu_QGPmGhwfB_hX",
+    "Arnhem": "https://drive.google.com/uc?export=view&id=10B3C05rOizplqkljx6AQ_jJ9ckMdr-Lw",
+    "ATKA": "https://drive.google.com/uc?export=view&id=1sBQtZf7iAYDprs-lkeKzFFtDA8tnIaPh",
+    "Brussel": "https://drive.google.com/uc?export=view&id=17HFOrQ_DTv_CZryJbWIQYXhRePQij1HK",
+    "Den Bosch": "https://drive.google.com/uc?export=view&id=1utownyHyAptBrfn3gAYV6AEjPQ8nBDvh",
+    "Filmacademie": "https://drive.google.com/uc?export=view&id=19-nupTqyTAdXxZd43vjH8hQYwx1eOSIr",
+    "Gent": "https://drive.google.com/uc?export=view&id=1PnORbXM9jPlIIf64vaCx6bXx5jgdTAKe",
+    "Leuven": "https://drive.google.com/uc?export=view&id=1dIrayxdFA6aDpqELF5Lhy2Qg_NgL038B",
+    "Maastricht": "https://drive.google.com/uc?export=view&id=1cH72n4pYsq_cl5DUfbk9Ro9ObTJoOPrL",
+    "Rotterdam": "https://drive.google.com/uc?export=view&id=1oj-gpjNO-s2J42leRW8BF7RBC5GPS1ev",
+    "Tilburg": "https://drive.google.com/uc?export=view&id=1zfaDvKiAnvLmph47Pcvl_MSiGuZljVFs",
+    "Utrecht": "https://drive.google.com/uc?export=view&id=1pMvdi1pdvrGLrKGwjxlycTpLA8g5ConU"
+  };
+  video.src = vlaggenanimatiesMp4[jurySchool] || "";
   video.autoplay = true;
   video.muted = true;
   video.playsInline = true;
@@ -93,6 +107,8 @@ function createAnimatieSlide1(juryNr = 1, juryTotaal = 12, juryNaam = "ATKA") {
   // Background
   const bg = document.createElement("div");
   bg.className = "animatieslide1-bg";
+  // Gebruik Google Drive background
+  bg.style.backgroundImage = 'url("https://drive.google.com/uc?export=view&id=1zPVYRYm2AI4AVLkoW4wZpMfIS2AyT0Jd")';
   slide.appendChild(bg);
 
   // Puntenrij onderin
@@ -174,6 +190,21 @@ function createPuntenAnimatieSlide(juryNr, juryTotaal, juryNaam) {
 
 // --- PUNTENSLIDE (jury geeft punten) ---
 function createPuntenSlide(punten, juryIndex) {
+  const vlaggenPng = {
+    "Antwerpen": "https://drive.google.com/uc?export=view&id=1hh_PjkyAU68zRe_AoYTrLJnVc-42PE30",
+    "Arnhem": "https://drive.google.com/uc?export=view&id=1out5QeFf23CqSCbckXrG0nqMUTdkeFa2",
+    "ATKA": "https://drive.google.com/uc?export=view&id=1HJhuzDHil8XkZAXQ1KdSCwjbZCa-xyaa",
+    "Brussel": "https://drive.google.com/uc?export=view&id=1_86VE2s3sKQt5wmKocJYrxAmWnQ8dVeV",
+    "Den Bosch": "https://drive.google.com/uc?export=view&id=1sPxYU-2EtV78vf0fqY0jwc58fH1ghqet",
+    "Filmacademie": "https://drive.google.com/uc?export=view&id=160i0mSii2hIrPisFWqSfvk1tFTQH02k8",
+    "Gent": "https://drive.google.com/uc?export=view&id=1EAxWbsnQRih0HxzsyOYRX_g3qaUTOdGv",
+    "Leuven": "https://drive.google.com/uc?export=view&id=1XvshrRk1Zx-4YaOy2JazBUNRhGQ5AmNV",
+    "Maastricht": "https://drive.google.com/uc?export=view&id=1bAuuw4YaorON50EyLlDyxfxyWFmLnHgw",
+    "Rotterdam": "https://drive.google.com/uc?export=view&id=1YHKROTB8pO_8nBfm8-7cArT1BA1mfkWF",
+    "Tilburg": "https://drive.google.com/uc?export=view&id=1wNMGf1jhnzWOAsNJD0DbOThPJuEBL-p6",
+    "Utrecht": "https://drive.google.com/uc?export=view&id=11R-fRPiEEv0nqd4BkTvhzl1iNCIKOZ9s"
+  };
+
   const slide = document.createElement("div");
   slide.className = "slide punten-slide";
 
@@ -199,7 +230,7 @@ function createPuntenSlide(punten, juryIndex) {
     } else {
       item.innerHTML = `
         <span class='school'>
-          <img src="vlaggen/${school}.png" class="vlag-icoon">
+          <img src="${vlaggenPng[school] || ''}" class="vlag-icoon">
           ${school}
         </span>
         <span class='punten'>${value}</span>`;
@@ -235,6 +266,21 @@ function createPuntenSlide(punten, juryIndex) {
 
 // --- SCOREBORD SLIDE (met cyaan/paars juryblokjes rechtsonder) ---
 function createScoreboardSlide(scoreTotaal, nieuwePunten) {
+  const vlaggenPng = {
+    "Antwerpen": "https://drive.google.com/uc?export=view&id=1hh_PjkyAU68zRe_AoYTrLJnVc-42PE30",
+    "Arnhem": "https://drive.google.com/uc?export=view&id=1out5QeFf23CqSCbckXrG0nqMUTdkeFa2",
+    "ATKA": "https://drive.google.com/uc?export=view&id=1HJhuzDHil8XkZAXQ1KdSCwjbZCa-xyaa",
+    "Brussel": "https://drive.google.com/uc?export=view&id=1_86VE2s3sKQt5wmKocJYrxAmWnQ8dVeV",
+    "Den Bosch": "https://drive.google.com/uc?export=view&id=1sPxYU-2EtV78vf0fqY0jwc58fH1ghqet",
+    "Filmacademie": "https://drive.google.com/uc?export=view&id=160i0mSii2hIrPisFWqSfvk1tFTQH02k8",
+    "Gent": "https://drive.google.com/uc?export=view&id=1EAxWbsnQRih0HxzsyOYRX_g3qaUTOdGv",
+    "Leuven": "https://drive.google.com/uc?export=view&id=1XvshrRk1Zx-4YaOy2JazBUNRhGQ5AmNV",
+    "Maastricht": "https://drive.google.com/uc?export=view&id=1bAuuw4YaorON50EyLlDyxfxyWFmLnHgw",
+    "Rotterdam": "https://drive.google.com/uc?export=view&id=1YHKROTB8pO_8nBfm8-7cArT1BA1mfkWF",
+    "Tilburg": "https://drive.google.com/uc?export=view&id=1wNMGf1jhnzWOAsNJD0DbOThPJuEBL-p6",
+    "Utrecht": "https://drive.google.com/uc?export=view&id=11R-fRPiEEv0nqd4BkTvhzl1iNCIKOZ9s"
+  };
+
   const slide = document.createElement("div");
   slide.className = "slide scoreboard-slide";
 
@@ -271,7 +317,7 @@ function createScoreboardSlide(scoreTotaal, nieuwePunten) {
       <div class="positie">${entry.positie.toString().padStart(2, '0')}</div>
       <div class="schoolblok">
         <span class="schoolnaam">
-          <img src="vlaggen/${entry.school}.png" class="vlag-icoon">
+          <img src="${vlaggenPng[entry.school] || ''}" class="vlag-icoon">
           ${entry.school}
         </span>
         ${entry.nieuw > 0 ? `<span class="puntennieuw ${entry.nieuw === 12 ? 'twaalf' : ''}">${entry.nieuw}</span>` : ''}
