@@ -1,0 +1,47 @@
+{
+  "jury": [
+    {
+      "school": "ATKA",
+      "punten": {
+        "Maastricht": 12,
+        "Gent": 10,
+        "Utrecht": 8,
+        "Arnhem": 7,
+        "Rotterdam": 6,
+        "Tilburg": 5,
+        "Brussel": 4,
+        "Antwerpen": 3,
+        "Leuven": 2,
+        "Den Bosch": 1
+      }
+    },
+    {
+      "school": "Arnhem",
+      "punten": {
+        "Gent": 12,
+        "Maastricht": 10,
+        "Tilburg": 8,
+        "Utrecht": 7,
+        "Antwerpen": 6,
+        "Rotterdam": 5,
+        "Leuven": 4,
+        "Brussel": 3,
+        "ATKA": 2,
+        "Den Bosch": 1
+      }
+    }
+  ],
+  "televote": {
+    "Den Bosch": 16,
+    "Leuven": 14,
+    "ATKA": 12,
+    "Brussel": 10,
+    "Tilburg": 8,
+    "Rotterdam": 7,
+    "Arnhem": 6,
+    "Utrecht": 4,
+    "Gent": 3,
+    "Antwerpen": 2,
+    "Maastricht": 1
+  }
+}
