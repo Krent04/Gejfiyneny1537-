@@ -15,7 +15,9 @@ body::before {
   width: 100vw;
   height: 100vh;
   z-index: -1;
-  background: url('background.png') no-repeat center center fixed;
+  /* VERVANG deze regel door de juiste Google Drive link: */
+  /* background: url('background.png') no-repeat center center fixed; */
+  background: url('https://drive.google.com/uc?export=view&id=1zPVYRYm2AI4AVLkoW4wZpMfIS2AyT0Jd') no-repeat center center fixed;
   background-size: cover;
 }
 
